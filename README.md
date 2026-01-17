@@ -20,6 +20,28 @@
 
 如果需要单人使用，按 `SKILL.md` 的流程执行即可。
 
+## 安装到 agent
+
+### Codex CLI
+
+将 skill 目录复制到 `$CODEX_HOME/skills`（默认 `~/.codex/skills`）：
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/llm-inference-perf ~/.codex/skills/
+```
+
+如果你自定义了 `CODEX_HOME`，请替换对应路径。
+
+### Claude Code
+
+将 skill 目录复制到 Claude Code 的技能目录中（以你的配置为准，通常为项目级 `.claude/skills/` 或全局技能目录）：
+
+```bash
+mkdir -p .claude/skills
+cp -R skills/llm-inference-perf .claude/skills/
+```
+
 ## 快速开始
 
 ```bash
