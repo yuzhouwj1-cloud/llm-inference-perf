@@ -42,6 +42,15 @@ mkdir -p .claude/skills
 cp -R skills/llm-inference-perf .claude/skills/
 ```
 
+## 在 agent 中使用（示例）
+
+安装好 skill 后，在对话中直接提出任务即可触发。示例：
+
+- “请用 `llm-inference-perf` 技能，基于 `baseline.csv` 计算 GB200 和 H200 在 `ttft=1s、tpot=50ms` 下的吞吐，并输出提升幅度与性价比。”
+- “tpot=20ms、ttft=1s、in=4096、out=1024，对比 GB200 vs H200 的每卡吞吐。”
+
+若需强制触发，可明确要求使用 `estimate_throughput.py` 脚本。
+
 ## 快速开始
 
 ```bash
